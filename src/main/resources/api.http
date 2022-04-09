@@ -1,0 +1,44 @@
+POST http://localhost:8888/signUp
+Content-Type: application/json
+
+{
+  "accountId": "test1",
+  "name": "min",
+  "email": "abc@acb.com",
+  "permission": "MEMBER",
+  "password": "1234"
+}
+
+###
+POST http://localhost:8888/signUp
+Content-Type: application/json
+
+{
+  "accountId": "test2",
+  "name": "min2",
+  "email": "abc@acb.com",
+  "permission": "MEMBER",
+  "password": "1234"
+}
+
+###
+
+POST http://localhost:8888/signIn
+Content-Type: application/json
+
+{
+  "accountId": "test1",
+  "password": "1234"
+}
+
+###
+
+GET http://localhost:8888/accounts/test1
+Accept: application/json
+
+###
+
+GET http://localhost:8888/accounts
+Accept: application/json
+
+###
